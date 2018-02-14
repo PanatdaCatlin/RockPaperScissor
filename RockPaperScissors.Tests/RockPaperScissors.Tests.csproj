@@ -10,6 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoinCombinations\CoinCombinations.csproj" />
+    <ProjectReference Include="..\RockPaperScissors\RockPaperScissors.csproj" />
   </ItemGroup>
 </Project>
