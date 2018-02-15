@@ -1,0 +1,11 @@
+$(function(){
+  $(".player1").click(function(){
+    $("#player1choice").val($(this).val());
+  });
+  $(".player2").click(function(){
+    $("#player2choice").val($(this).val());
+  });
+  $("#checkCondition").click(function(){
+    $("#play-form").submit();
+  })
+});

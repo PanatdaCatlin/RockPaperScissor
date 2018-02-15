@@ -24,24 +24,11 @@ namespace RockPaperScissors.Controllers
     {
       return View("game", _myPlayers);
     }
-
-    [HttpGet("/playerOneWins")]
-    public ActionResult PlayerOneWins()
+    [HttpPost("/result")]
+    public ActionResult SubmitPlays()
     {
-      _myPlayers.WinCondition(playerOneChoice, playerTwoChoice);
-      return View("playerOneWins");
-    }
-    [HttpGet("/playerTwoWins")]
-    public ActionResult PlayerTwoWins()
-    {
-      _myPlayers.WinCondition(playerOneChoice, playerTwoChoice);
-      return View("playerTwoWins");
-    }
-    [HttpGet("/draw")]
-    public ActionResult Draw()
-    {
-      _myPlayers.WinCondition(playerOneChoice, playerTwoChoice);
-      return View("draw");
+      string result = _myPlayers.WinCondition(Request.Form["player-one-choice"], Request.Form["player-two-choice"]);
+      return View("Winner", result);
     }
   }
 }

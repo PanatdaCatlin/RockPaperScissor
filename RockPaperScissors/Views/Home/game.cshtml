@@ -4,6 +4,8 @@
 <head>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
   <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  <script src="~/js/jquery-3.3.1.js"></script>
+  <script src="~/js/scripts.js"></script>
   <title>RockPaperScissor</title>
 </head>
 <body>
@@ -12,24 +14,22 @@
     <div class="row">
       <div class="col">
         <h1>@Model.GetPlayerOneName()</h1>
-        <button type="button" id="rock1" name="button">Rock</button><br>
-        <button type="button" id="paper1" name="button">Paper</button><br>
-        <button type="button" id="scissor1" name="button">Scissors</button>
+        <button type="button" class="player1" value="rock" name="button">Rock</button><br>
+        <button type="button" class="player1" value="paper" name="button">Paper</button><br>
+        <button type="button" class="player1" value="scissors" name="button">Scissors</button>
       </div>
       <div class="col">
         <h1>@Model.GetPlayerTwoName()</h1>
-        <button type="button" id="rock2" name="button">Rock</button><br>
-        <button type="button" id="paper2" name="button">Paper</button><br>
-        <button type="button" id="scissor2" name="button">Scissors</button>
+        <button type="button" class="player2" value="rock" name="button">Rock</button><br>
+        <button type="button" class="player2" value="paper" name="button">Paper</button><br>
+        <button type="button" class="player2" value="scissors" name="button">Scissors</button>
       </div>
-      <button type="button" name="button">Check Winner</button>
+      <button type="button" id="checkCondition" name="button">Check Winner</button>
     </div>
   </div>
+  <form id="play-form" action="/result" method="post">
+    <input type="hidden" id="player1choice" name="player-one-choice" value="">
+    <input type="hidden" id="player2choice" name="player-two-choice" value="">
+  </form>
 </body>
 </html>
-
-<script type="text/javascript">
-  $().click(function(){
-    @RockPaperScissor.WinCondition()
-  })
-</script>

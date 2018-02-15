@@ -9,9 +9,9 @@ namespace RockPaperScissors.Models
     private string _rock = "rock";
     private string _scissors = "scissors";
     private string _paper = "paper";
-    private string _draw = "draw";
-    private string _playerOneWins = "player one wins";
-    private string _playerTwoWins = "player two wins";
+    private string _draw = "Draw, play again.";
+    private string _playerOneWins = "Player one wins";
+    private string _playerTwoWins = "Player two wins";
     private string _playerOneName;
     private string _playerTwoName;
 
