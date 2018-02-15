@@ -1,0 +1,17 @@
+body{
+  background: lightblue url("../img/rock.png")fixed no-repeat bottom right;
+
+}
+h1{
+  text-align: center;
+  color: Navy;
+}
+.player1, .player2{
+  display: block;
+}
+#checkCondition{
+  margin-left: 250px;
+}
+a{
+  text-align: center;
+}

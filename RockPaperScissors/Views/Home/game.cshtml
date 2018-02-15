@@ -10,22 +10,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Game</h1>
+    <h1>Rock, Paper, Scissors</h1>
     <div class="row">
       <div class="col">
-        <h1>@Model.GetPlayerOneName()</h1>
+        <h2>Player One: @Model.GetPlayerOneName()</h2>
         <button type="button" class="player1" value="rock" name="button">Rock</button><br>
         <button type="button" class="player1" value="paper" name="button">Paper</button><br>
         <button type="button" class="player1" value="scissors" name="button">Scissors</button>
       </div>
       <div class="col">
-        <h1>@Model.GetPlayerTwoName()</h1>
+        <h2>Player Two: @Model.GetPlayerTwoName()</h2>
         <button type="button" class="player2" value="rock" name="button">Rock</button><br>
         <button type="button" class="player2" value="paper" name="button">Paper</button><br>
         <button type="button" class="player2" value="scissors" name="button">Scissors</button>
       </div>
-      <button type="button" id="checkCondition" name="button">Check Winner</button>
     </div>
+    <hr><button type="button" id="checkCondition" name="button">Check Winner</button>
   </div>
   <form id="play-form" action="/result" method="post">
     <input type="hidden" id="player1choice" name="player-one-choice" value="">
