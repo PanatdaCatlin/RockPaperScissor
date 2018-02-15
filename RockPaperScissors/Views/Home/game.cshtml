@@ -1,3 +1,4 @@
+@using RockPaperScissors.Models;
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,3 +27,9 @@
   </div>
 </body>
 </html>
+
+<script type="text/javascript">
+  $().click(function(){
+    @RockPaperScissor.WinCondition()
+  })
+</script>
