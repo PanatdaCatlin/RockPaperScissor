@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RockPaperScissors;
+using RockPaperScissors.Models;
 using System.Collections.Generic;
 
 namespace RockPaperScissors.Tests
@@ -11,37 +11,37 @@ namespace RockPaperScissors.Tests
     public void IsRockPaperScissors_RockOverScissors_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("rock", newCombination.WinCondition("rock", "scissors"));
+      Assert.AreEqual("player one wins", newCombination.WinCondition("rock", "scissors"));
     }
     [TestMethod]
     public void IsRockPaperScissors_RockOverScissors2_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("rock", newCombination.WinCondition("scissors", "rock"));
+      Assert.AreEqual("player two wins", newCombination.WinCondition("scissors", "rock"));
     }
     [TestMethod]
     public void IsRockPaperScissors_RockOverPaper_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("paper", newCombination.WinCondition("rock", "paper"));
+      Assert.AreEqual("player two wins", newCombination.WinCondition("rock", "paper"));
     }
     [TestMethod]
     public void IsRockPaperScissors_RockOverPaper2_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("paper", newCombination.WinCondition("paper", "rock"));
+      Assert.AreEqual("player one wins", newCombination.WinCondition("paper", "rock"));
     }
     [TestMethod]
     public void IsRockPaperScissors_PaperOverScissors_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("scissors", newCombination.WinCondition("paper", "scissors"));
+      Assert.AreEqual("player two wins", newCombination.WinCondition("paper", "scissors"));
     }
     [TestMethod]
     public void IsRockPaperScissors_PaperOverScissors2_True()
     {
       RockPaperScissor newCombination = new RockPaperScissor();
-      Assert.AreEqual("scissors", newCombination.WinCondition("scissors", "paper"));
+      Assert.AreEqual("player one wins", newCombination.WinCondition("scissors", "paper"));
     }
     [TestMethod]
     public void IsRockPaperScissors_RockOverRock_True()
